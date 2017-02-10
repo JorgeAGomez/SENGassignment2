@@ -178,7 +178,6 @@ function mostFrequentWords(txt){
     }
   }
 
-
   while(mostFrenquestResult.length < 10){
     var func = Object.keys(dic).map(function (key) { return dic[key]; });
     var maximum = Math.max.apply(null,func);
@@ -188,6 +187,8 @@ function mostFrequentWords(txt){
         mostFrenquestResult.push(newKeyy + "(" + maximum + ")");
       }
       delete dic[newKeyy];
+    } else{
+      break;
     }
   }
   console.log(mostFrenquestResult);
