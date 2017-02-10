@@ -42,7 +42,7 @@ function nChars(txt){
 
 //Gets the total number of words in a text
 function nWords(txt){
-  var arrayTxt = txt.split(/\W+/);
+  var arrayTxt = txt.split(/[^a-zA-Z0-9'-]/);
   var numWords = 0;
   for (i = 0; i < arrayTxt.length; i++) {
     if (arrayTxt[i].length != 0) {
@@ -90,11 +90,12 @@ function maxLineLength(txt){
 
 //Gets the average word length in a text
 function averageWordLength(txt){
-  var arrayTxt = txt.split(/\W+/);
+  var arrayTxt = txt.split(/[^a-zA-Z0-9'-]/);
   var avg = 0;
   var divideBy = 0;
   for(i = 0; i < arrayTxt.length; i++){
     if (arrayTxt[i] != "" && arrayTxt[i].lenth != 0){
+      console.log(arrayTxt[i].length);
       avg = avg + arrayTxt[i].length;
       divideBy = divideBy + 1;
     }
@@ -106,7 +107,7 @@ function averageWordLength(txt){
 function palindromes(txt){
   var lowerCase = txt.toLowerCase();
   var palindromes = [];
-  var arrayTxt = lowerCase.split(/\W+/);
+  var arrayTxt = lowerCase.split(/[^a-zA-Z0-9'-]/);
   for(i = 0; i < arrayTxt.length; i++){
     if (arrayTxt[i].length > 2 && arrayTxt[i] == arrayTxt[i].split('').reverse().join('')){
       var add = true;
@@ -127,7 +128,7 @@ function palindromes(txt){
 function longestWords(txt){
   var currentLongest = [];
   var result = [];
-  var arrayTxt = txt.split(/\W+/);
+  var arrayTxt = txt.split(/[^a-zA-Z0-9'-]/);
   arrayTxt.sort()
 
   for (i = 0; i < arrayTxt.length; i++) {
@@ -160,7 +161,7 @@ function longestWords(txt){
 
 //Gets the 10 most frequent words in a text
 function mostFrequentWords(txt){
-  var arrayTxt = txt.toLowerCase().split(/\W+/);
+  var arrayTxt = txt.toLowerCase().split(/[^a-zA-Z0-9'-]/);
   var mostFrenquestResult = [];
   var mostFrenquestNum = [];
   var dic = {};
