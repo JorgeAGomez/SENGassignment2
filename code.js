@@ -94,7 +94,7 @@ function averageWordLength(txt){
   var avg = 0;
   var divideBy = 0;
   for(i = 0; i < arrayTxt.length; i++){
-    if (arrayTxt[i] != ""){
+    if (arrayTxt[i] != "" && arrayTxt[i].lenth != 0){
       avg = avg + arrayTxt[i].length;
       divideBy = divideBy + 1;
     }
@@ -167,7 +167,6 @@ function mostFrequentWords(txt){
   var result = [];
   arrayTxt.sort();
 
-
   for (i = 0; i < arrayTxt.length; i++){
     dic[arrayTxt[i]] = 0;
   }
@@ -191,6 +190,6 @@ function mostFrequentWords(txt){
       break;
     }
   }
-  console.log(mostFrenquestResult);
+
   return mostFrenquestResult;
 }
