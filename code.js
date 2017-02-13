@@ -128,6 +128,7 @@ function palindromes(txt){
 function longestWords(txt){
   var currentLongest = [];
   var result = [];
+  txt.toLowerCase();
   var arrayTxt = txt.split(/[^a-zA-Z0-9'-]/);
   arrayTxt.sort()
 
