@@ -128,8 +128,7 @@ function palindromes(txt){
 function longestWords(txt){
   var currentLongest = [];
   var result = [];
-  txt.toLowerCase();
-  var arrayTxt = txt.split(/[^a-zA-Z0-9'-]/);
+  var arrayTxt = txt.toLowerCase().split(/[^a-zA-Z0-9'-]/);
   arrayTxt.sort()
 
   for (i = 0; i < arrayTxt.length; i++) {
@@ -145,7 +144,7 @@ function longestWords(txt){
     } else {
         for (j = 0; j < result.length; j++){
           if(result[j] == arrayTxt[getIndex]){
-            currentLongest.splice(getIndex,1);
+            currsentLongest.splice(getIndex,1);
             arrayTxt.splice(getIndex,1);
             add = false;
           } else{
