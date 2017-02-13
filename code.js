@@ -144,7 +144,7 @@ function longestWords(txt){
     } else {
         for (j = 0; j < result.length; j++){
           if(result[j] == arrayTxt[getIndex]){
-            currsentLongest.splice(getIndex,1);
+            currentLongest.splice(getIndex,1);
             arrayTxt.splice(getIndex,1);
             add = false;
           } else{
